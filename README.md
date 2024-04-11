@@ -16,32 +16,12 @@ curl localhost:5000/models
 
 This would be the expected output:
 ```
-StatusCode        : 200
-StatusDescription : OK
 Content           : {
                       "description": "Classify images containing damaged/undamaged buildings",
                       "name": "models",
                       "number_of_parameters": 133280,
                       "version": "v1"
                     }
-
-RawContent        : HTTP/1.1 200 OK
-                    Connection: close
-                    Content-Length: 151
-                    Content-Type: application/json
-                    Date: Thu, 11 Apr 2024 13:13:43 GMT
-                    Server: Werkzeug/3.0.2 Python/3.11.9
-
-                    {
-                      "description": "Classify image...
-Forms             : {}
-Headers           : {[Connection, close], [Content-Length, 151], [Content-Type, application/json], [Date, Thu, 11 Apr
-                    2024 13:13:43 GMT]...}
-Images            : {}
-InputFields       : {}
-Links             : {}
-ParsedHtml        : mshtml.HTMLDocumentClass
-RawContentLength  : 151
 ```
 
 You may also attempt these commands if the previous one does not work:
