@@ -24,7 +24,7 @@ Content           : {
                     }
 ```
 
-You may also attempt these commands if the previous one does not work:
+You may also attempt this commands if the previous one does not work:
 ```
 curl http://localhost:5000/models
 ```
