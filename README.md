@@ -28,9 +28,6 @@ You may also attempt these commands if the previous one does not work:
 ```
 curl http://localhost:5000/models
 ```
-```
-curl https://localhost:5000/models
-```
 
 __To get a prediction for damaged or not on an input picture, run this in a Python script/Jupyter Notebook:__ 
 ```
