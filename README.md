@@ -32,9 +32,12 @@ curl http://localhost:5000/models
 curl https://localhost:5000/models
 ```
 
-__To get a prediction for damaged or not on an input picture, run this in `project3.ipynb`:__ 
+__To get a prediction for damaged or not on an input picture, run this in a Python script/Jupyter Notebook:__ 
 ```
 rsp = requests.post("http://172.17.0.1:5000/models", json={"image": input_image})
 rsp.json()
 ```
-where `input_image` is a serialized image
+where `input_image` is a serialized image. Note that `Flask` is a required module. 
+The expected output for this is a prediction array that corresponds to the labels `[damage, no_damage]` that should look as follows: 
+[1.0, 0.0] 
+This array response would be interpreted as predicting damage in the input image using the Alt Lenet model.
