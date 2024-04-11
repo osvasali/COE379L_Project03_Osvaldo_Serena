@@ -3,10 +3,10 @@ import tensorflow as tf
 import numpy as np
 
 app = Flask(__name__)
-model_lenet5 = tf.keras.models.load_model('models/lenet5.keras')
+model_altlenet = tf.keras.models.load_model('models/altlenet.keras')
 
 
-@app.route('models/', methods=['GET'])
+@app.route('/models', methods=['GET'])
 def model_info():
    return {
       "version": "v1",
@@ -25,7 +25,7 @@ def preprocess_input(im):
    # then add an extra dimension
    return d.reshape(1, 28, 28)
 
-@app.route('models/', methods=['POST'])
+@app.route('/models', methods=['POST'])
 def classify_clothes_image():
    im = request.json.get('image')
    if not im:
@@ -34,7 +34,7 @@ def classify_clothes_image():
       data = preprocess_input(im)
    except Exception as e:
       return {"error": f"Could not process the `image` field; details: {e}"}, 404
-   return { "result": model_lenet5.predict(data).tolist()}
+   return { "result": model_altlenet.predict(data).tolist()}
 
 
 # start the development server
