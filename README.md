@@ -36,5 +36,5 @@ rsp.json()
 ```
 where `input_image` is a serialized image. Note that `Flask` is a required module.  
 __The expected output for this is a prediction array that corresponds to an array with labels `[damage, no_damage]` that should look as follows:__   
-[1.0, 0.0]  
+`[1.0, 0.0]`  
 This array response would be interpreted as predicting damage in the input image using the Alt Lenet model.
